@@ -3,7 +3,7 @@ services:
     name: blueroute-generator
     runtime: node
     buildCommand: npm install
-    startCommand: npm run start
+    startCommand: node index.cjs
     envVars:
       - key: NODE_ENV
         value: production
