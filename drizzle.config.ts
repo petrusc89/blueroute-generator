@@ -1,20 +1,10 @@
-{
-    "$schema": "https://ui.shadcn.com/schema.json",
-    "style": "new-york",
-    "rsc": false,
-    "tsx": true,
-    "tailwind": {
-      "config": "tailwind.config.ts",
-      "css": "client/src/index.css",
-      "baseColor": "neutral",
-      "cssVariables": true,
-      "prefix": ""
-    },
-    "aliases": {
-      "components": "@/components",
-      "utils": "@/lib/utils",
-      "ui": "@/components/ui",
-      "lib": "@/lib",
-      "hooks": "@/hooks"
-    }
-}
+import { defineConfig } from "drizzle-kit";
+
+export default defineConfig({
+  out: "./migrations",
+  schema: "./shared/schema.ts",
+  dialect: "sqlite",
+  dbCredentials: {
+    url: "./data.db",
+  },
+});
