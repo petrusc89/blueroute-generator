@@ -2,7 +2,7 @@ services:
   - type: web
     name: blueroute-generator
     runtime: node
-    buildCommand: npm install
+    buildCommand: npm install && npm rebuild better-sqlite3
     startCommand: node index.cjs
     envVars:
       - key: NODE_ENV
